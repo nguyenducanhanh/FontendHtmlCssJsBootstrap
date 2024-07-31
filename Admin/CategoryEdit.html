@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sửa Loại Sản Phẩm</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="/Admin/Style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin</h2>
+        <a href="/Admin/Index.html"><i class="fas fa-box"></i> Trang chủ</a>
+        <a href="/Admin/Product.html"><i class="fas fa-tags"></i> Quản lý sản phẩm</a>
+        <a href="/Admin/Category.html"><i class="fas fa-tags"></i> Quản lý loại sản phẩm</a>
+        <a href="/Admin/Order.html"><i class="fas fa-file-invoice"></i> Quản lý hóa đơn</a>
+        <a href="/Admin/Account.html"><i class="fas fa-users"></i> Quản lý người dùng</a>
+        <a href="/Admin/News.html"><i class="fas fa-user"></i> Quản lý bài viết</a>
+    </div>
+
+    <div class="content">
+        <div class="header">
+            <h2>Sửa Loại Sản Phẩm</h2>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="adminMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="admin-logo.png" alt="Admin" style="width: 30px; border-radius: 50%;">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="adminMenuButton">
+                    <a class="dropdown-item" href="#profile">Trang cá nhân</a>
+                    <a class="dropdown-item" href="#logout">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="container">
+                <form id="editAccountForm">
+                    <div >
+                        <div class="form-group col-md-6">
+                            <label for="name">Tên Loại Sản Phẩm</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="phone">Mô Tả</label>
+                            <input type="text" class="form-control" id="phone" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Lưu</button>
+                    <a href="/Admin/Account.html" class="btn btn-secondary">Hủy</a>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 NGUYEN DUC ANH.</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

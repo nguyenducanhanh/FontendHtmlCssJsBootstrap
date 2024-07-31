@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Hóa Đơn</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="/Admin/Style.css" rel="stylesheet">
+    <style>
+       
+        .pagination {
+            justify-content: center;
+        }
+        .status {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin</h2>
+        <a href="/Admin/Index.html"><i class="fas fa-box"></i> Trang chủ</a>
+        <a href="/Admin/Product.html"><i class="fas fa-tags"></i> Quản lý sản phẩm</a>
+        <a href="/Admin/Category.html"><i class="fas fa-tags"></i> Quản lý loại sản phẩm</a>
+        <a href="/Admin/Order.html"><i class="fas fa-file-invoice"></i> Quản lý hóa đơn</a>
+        <a href="/Admin/Account.html"><i class="fas fa-users"></i> Quản lý người dùng</a>
+        <a href="/Admin/News.html"><i class="fas fa-user"></i> Quản lý bài viết</a>
+    </div>
+
+    <div class="content">
+        <div class="header">
+            <h2>Chi Tiết Hóa Đơn</h2>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="adminMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="admin-logo.png" alt="Admin" style="width: 30px; border-radius: 50%;">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="adminMenuButton">
+                    <a class="dropdown-item" href="#profile">Trang cá nhân</a>
+                    <a class="dropdown-item" href="#logout">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="container">
+                <h3>Hóa Đơn #12345</h3>
+                <p><strong>Khách Hàng:</strong> Khách Hàng A</p>
+                <p><strong>Địa Chỉ:</strong> 123 Đường ABC, Quận 1, TP.HCM</p>
+                <p><strong>Số Điện Thoại:</strong> 0901234567</p>
+                <p><strong>Ngày Đặt:</strong> 2024-07-20</p>
+                <p><strong>Phương Thức:</strong> Chuyển Khoản</p>
+                <p><strong>Trạng Thái:</strong> Đã Thanh Toán</p>
+
+                <!-- Bảng danh sách sản phẩm trong hóa đơn -->
+                <table class="table table-striped mt-4">
+                    <thead>
+                        <tr>
+                            <th>Tên Sản Phẩm</th>
+                            <th>Số Lượng</th>
+                            <th>Giá Bán x1</th>
+                            <th>Tổng Giá</th>
+                            <th>Ngày Đặt</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sản Phẩm 1</td>
+                            <td>2</td>
+                            <td>500.000 VNĐ</td>
+                            <td>1.000.000 VNĐ</td>
+                            <td>2024-07-20</td>
+                        </tr>
+                        <tr>
+                            <td>Sản Phẩm 2</td>
+                            <td>1</td>
+                            <td>200.000 VNĐ</td>
+                            <td>200.000 VNĐ</td>
+                            <td>2024-07-20</td>
+                        </tr>
+                        <!-- Thêm các sản phẩm khác tại đây -->
+                    </tbody>
+                </table>
+
+                <!-- Tổng giá hóa đơn -->
+                <div class="mt-4">
+                    <h4><strong>Tổng Giá Hóa Đơn:</strong> 1.200.000 VNĐ</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 NGUYEN DUC ANH.</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

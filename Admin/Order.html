@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Hóa Đơn</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="/Admin/Style.css" rel="stylesheet">
+    <style>
+        .pagination {
+            justify-content: center;
+        }
+        .status {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Admin</h2>
+        <a href="/Admin/Index.html"><i class="fas fa-box"></i> Trang chủ</a>
+        <a href="/Admin/Product.html"><i class="fas fa-tags"></i> Quản lý sản phẩm</a>
+        <a href="/Admin/Category.html"><i class="fas fa-tags"></i> Quản lý loại sản phẩm</a>
+        <a href="/Admin/Order.html"><i class="fas fa-file-invoice"></i> Quản lý hóa đơn</a>
+        <a href="/Admin/Account.html"><i class="fas fa-users"></i> Quản lý người dùng</a>
+        <a href="/Admin/News.html"><i class="fas fa-user"></i> Quản lý bài viết</a>
+    </div>
+
+    <div class="content">
+        <div class="header">
+            <h2>Quản Lý Hóa Đơn</h2>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="adminMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="admin-logo.png" alt="Admin" style="width: 30px; border-radius: 50%;">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="adminMenuButton">
+                    <a class="dropdown-item" href="#profile">Trang cá nhân</a>
+                    <a class="dropdown-item" href="#logout">Đăng xuất</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="container">
+                <div class="row mb-3">
+                    <div class="col-md-8">
+                        <h3>Danh Sách Hóa Đơn</h3>
+                    </div>
+                    <div class="col-md-4 text-right">
+                        <a href="#add-invoice" class="btn btn-primary"><i class="fas fa-plus"></i> Thêm Hóa Đơn</a>
+                    </div>
+                </div>
+
+                <!-- Thanh tìm kiếm -->
+                <div class="row mb-3">
+                    <div class="col">
+                        <form class="form-inline">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm hóa đơn..." aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fas fa-search"></i> Tìm kiếm</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Bảng danh sách hóa đơn -->
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Tên</th>
+                            <th>Địa Chỉ</th>
+                            <th>Số Điện Thoại</th>
+                            <th>Phương Thức</th>
+                            <th>Trạng Thái</th>
+                            <th>Hành Động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Khách Hàng A</td>
+                            <td>123 Đường ABC, Quận 1, TP.HCM</td>
+                            <td>0901234567</td>
+                            <td>Chuyển Khoản</td>
+                            <td><span class="status text-success">Đã Thanh Toán</span></td>
+                            <td>
+                                <a href="/Admin/OrderDetail.html" class="btn btn-info btn-sm"><i class="fas fa-eye"></i> Xem</a>
+                                <a href="#edit-invoice" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Sửa</a>
+                                <a href="#delete-invoice" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Xóa</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Khách Hàng B</td>
+                            <td>456 Đường XYZ, Quận 2, TP.HCM</td>
+                            <td>0912345678</td>
+                            <td>Thanh Toán Khi Giao</td>
+                            <td><span class="status text-warning">Chưa Thanh Toán</span></td>
+                            <td>
+                                <a href="/Admin/OrderDetail.html" class="btn btn-info btn-sm"><i class="fas fa-eye"></i> Xem</a>
+                                <a href="#edit-invoice" class="btn btn-warning btn-sm"><i class="fas fa-edit"></i> Sửa</a>
+                                <a href="#delete-invoice" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i> Xóa</a>
+                            </td>
+                        </tr>
+                        <!-- Thêm các hóa đơn khác tại đây -->
+                    </tbody>
+                </table>
+
+                <!-- Phân trang -->
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="page-item disabled">
+                            <span class="page-link">«</span>
+                        </li>
+                        <li class="page-item active">
+                            <span class="page-link">1</span>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                            <a class="page-link" href="#">»</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>© 2024 NGUYEN DUC ANH.</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

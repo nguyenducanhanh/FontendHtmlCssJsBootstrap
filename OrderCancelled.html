@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đơn đã mua - Web bán hàng</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>
+    /* CSS cho trang đơn đã mua */
+    .order-list .order-item {
+        background-color: #ffffff;
+    }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var totalAmount = 0;
+            var orderItems = document.querySelectorAll('.order-item');
+
+            orderItems.forEach(function (item) {
+                var total = item.querySelector('.col-md-4 h5').innerText.split(': ')[1].replace(' VND', '').replace(/,/g, '');
+                totalAmount += parseInt(total);
+            });
+
+            document.getElementById('total-amount').innerText = totalAmount.toLocaleString() + ' VND';
+        });
+    </script>
+
+</head>
+<body>
+<!-- Thanh menu đầu tiên -->
+<nav class="navbar navbar-expand-md navbar-light bg-light navbar-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">SHOP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav1">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Login.html">Đăng nhập</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Profile.html">Bạn</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Thanh menu thứ hai -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-bottom">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav2" aria-controls="navbarNav2" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav2">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sản phẩm
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/Product.html">Sản phẩm A (10)</a>
+                        <a class="dropdown-item" href="/Product.html">Sản phẩm B (5)</a>                       
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Introduct.html">Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/News.html">Tin tức</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Cart.html"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Trang đơn đã mua -->
+    <div class="profile-container">
+        <!-- Phần bên trái -->
+        <div class="profile-section">
+            <h5>Email</h5>
+            <p id="email">user@example.com</p>
+            <button class="btn btn-info btn-sm">Xác thực Email</button>
+        </div>
+
+        <!-- Phần giữa -->
+        <div class="profile-info profile-section">
+            <h5>Đơn bị hủy</h5>
+            <div class="order-list">
+                <div class="order-item border p-3 mb-3">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="https://via.placeholder.com/150" class="img-fluid" alt="Sản phẩm A">
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Sản phẩm A</h5>
+                            <p>Số lượng: 2</p>
+                            <p>Giá: 100,000 VND</p>
+                        </div>
+                        <div class="col-md-4 text-right">
+                            <h5>Tổng: 200,000 VND</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="total-amount text-right mt-3">
+                <h5>Tổng tiền tất cả các đơn hàng: <span id="total-amount">350,000 VND</span></h5>
+            </div>
+        </div>
+
+        <!-- Phần bên phải -->
+           <!-- Phần bên phải -->
+           <div class="profile-sidebar profile-section">
+            <h5>Danh mục</h5>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a href="/ChangePassWord.html" class="d-block">Đổi mật khẩu</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="/PurchasedOrders.html" class="d-block">Đơn đã mua</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-block">Đơn chờ nhận</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="/OrderCancelled.html" class="d-block">Đơn bị hủy </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="#" class="d-block">Đăng xuất</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<br>
+<br>
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Web bán hàng.</p>
+    </div>
+
+    <!-- Bootstrap JS và các thư viện liên quan -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết bài viết - Web bán hàng</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <style>       
+        /* Nội dung */
+        .content {
+            margin-top: 150px;
+        }
+        .card-img-top {
+            width: 100%;
+            height: auto;
+        }
+        .comments {
+            margin-top: 30px;
+        }
+        .comment-form {
+            margin-top: 30px;
+        }
+
+        /* Top bài viết nổi bật và phần tìm kiếm */
+        .top-posts {
+            position: fixed;
+            right: 0;
+            top: 120px; /* Đặt cách thanh menu đầu tiên và thanh menu thứ hai */
+            width: 250px;
+            z-index: 1030;
+            max-height: calc(100vh - 120px); /* Đảm bảo phần này không cao hơn màn hình */
+            overflow-y: auto; /* Thêm thanh cuộn dọc nếu nội dung vượt quá chiều cao */
+        }
+
+        /* Định dạng cho danh mục */
+        .list-group-item a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        .list-group-item a:hover {
+            text-decoration: underline;
+        }
+        .list-group-item {
+            padding: 10px 15px;
+        }
+    </style>
+</head>
+<body>
+<!-- Thanh menu đầu tiên -->
+<nav class="navbar navbar-expand-md navbar-light bg-light navbar-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">SHOP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav1" aria-controls="navbarNav1" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav1">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Login.html">Đăng nhập</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Profile.html">Bạn</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Thanh menu thứ hai -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-bottom">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav2" aria-controls="navbarNav2" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav2">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Index.html">Trang chủ</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sản phẩm
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/Product.html">Sản phẩm A (10)</a>
+                        <a class="dropdown-item" href="/Product.html">Sản phẩm B (5)</a>                       
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Introduct.html">Giới thiệu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/News.html">Tin tức</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/Cart.html"><i class="fas fa-shopping-cart"></i> Giỏ hàng</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Nội dung bài viết -->
+    <div class="container content">
+        <div class="row">
+            <div class="col-md-8">
+                <!-- Bài viết chi tiết -->
+                <div class="card mb-4">
+                    <img src="https://via.placeholder.com/800x400" class="card-img-top" alt="Bài viết">
+                    <div class="card-body">
+                        <h2 class="card-title">Tiêu đề bài viết</h2>
+                        <p class="card-text">Nội dung chi tiết của bài viết. Đây là nơi bạn có thể thêm các thông tin, hình ảnh, và nội dung chi tiết của bài viết.</p>
+                        <p class="card-text"><small class="text-muted">Tác giả: John Doe | Ngày đăng: 20/07/2024</small></p>
+                    </div>
+                </div>
+
+                <!-- Bình luận -->
+                <div class="comments">
+                    <h4>Bình luận</h4>
+                    <div class="media mb-4">
+                        <img src="https://via.placeholder.com/64x64" class="mr-3" alt="User">
+                        <div class="media-body">
+                            <h5 class="mt-0">Người dùng 1</h5>
+                            Bình luận của người dùng 1. Nội dung bình luận có thể dài hoặc ngắn tùy theo ý muốn.
+                        </div>
+                    </div>
+                    <div class="media mb-4">
+                        <img src="https://via.placeholder.com/64x64" class="mr-3" alt="User">
+                        <div class="media-body">
+                            <h5 class="mt-0">Người dùng 2</h5>
+                            Bình luận của người dùng 2. Nội dung bình luận có thể dài hoặc ngắn tùy theo ý muốn.
+                        </div>
+                    </div>
+                    <!-- Thêm nhiều bình luận ở đây -->
+                </div>
+
+                <!-- Form bình luận -->
+                <div class="comment-form">
+                    <h4>Thêm bình luận</h4>
+                    <form>
+                        <div class="form-group">
+                            <textarea class="form-control" id="commentText" rows="3" placeholder="Nhập bình luận của bạn"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Gửi</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Top bài viết nổi bật và phần tìm kiếm -->
+            <div class="col-md-4">
+                <!-- Top bài viết nổi bật -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Bài viết nổi bật</h5>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <img src="https://via.placeholder.com/100x60" class="img-thumbnail mr-2" alt="Bài viết 1">
+                            <a href="#">Bài viết 1</a>
+                        </li>
+                        <li class="list-group-item">
+                            <img src="https://via.placeholder.com/100x60" class="img-thumbnail mr-2" alt="Bài viết 2">
+                            <a href="#">Bài viết 2</a>
+                        </li>
+                        <li class="list-group-item">
+                            <img src="https://via.placeholder.com/100x60" class="img-thumbnail mr-2" alt="Bài viết 3">
+                            <a href="#">Bài viết 3</a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Form tìm kiếm -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Tìm kiếm</h5>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="search" placeholder="Tìm kiếm...">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Danh mục -->
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Danh mục</h5>
+                        <ul class="list-group">
+                            <li class="list-group-item"><a href="#">Danh mục 1</a></li>
+                            <li class="list-group-item"><a href="#">Danh mục 2</a></li>
+                            <li class="list-group-item"><a href="#">Danh mục 3</a></li>
+                            <li class="list-group-item"><a href="#">Danh mục 4</a></li>
+                            <!-- Thêm nhiều danh mục nếu cần -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2024 Web bán hàng. All rights reserved.</p>
+    </div>
+
+    <!-- Bootstrap JS và các thư viện liên quan -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

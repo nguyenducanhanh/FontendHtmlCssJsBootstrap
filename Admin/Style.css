@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Ngăn cuộn ngang */
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #343a40;
+    color: #fff;
+    position: fixed;
+    height: 100vh; /* Chiều cao bằng chiều cao của viewport */
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    z-index: 1000;
+    overflow-y: auto; /* Cho phép cuộn dọc nếu cần */
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    font-size: 1.1em;
+}
+
+.sidebar a:hover {
+    background-color: #495057;
+}
+
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 0;
+    min-height: 100vh; /* Đảm bảo nội dung luôn có chiều cao đủ */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #343a40;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 250px;
+    right: 0;
+    z-index: 1000;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.header .dropdown-menu {
+    left: auto;
+    right: 0;
+}
+
+.main-content {
+    padding: 20px;
+    margin-top: 60px; /* Khoảng cách dưới header */
+    overflow-y: auto; /* Cho phép cuộn dọc */
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #343a40;
+    color: #fff;
+    /* position: fixed; */
+    position: relative;
+    width: calc(100% - 250px);
+    bottom: 0;
+    left: 250px;
+}
+
+

@@ -1,0 +1,197 @@
+/* banner */
+.banner {
+    margin-top: 140px;
+}
+.banner img {
+    width: 100%;
+    height: auto;
+}
+.product-card {
+    margin-bottom: 20px;
+}
+
+
+.search-bar {
+margin-top: 20px; /* Điều chỉnh khoảng cách từ phần banner nếu cần */
+display: flex;
+flex-direction: column;
+align-items: center; /* Căn giữa nội dung theo chiều ngang */
+
+}
+
+/* Thanh menu đầu tiên */
+.navbar-top {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 1030; /* Đảm bảo thanh menu ở trên cùng */
+background-color: #f8f9fa; /* Màu nền để nó rõ ràng */
+}
+.navbar-top .navbar-nav .nav-link:hover {
+color: #1987f4; /* Màu nền khi hover */
+}
+
+/* Thanh menu thứ hai */
+.navbar-bottom {
+position: fixed;
+top: 56px; /* Đặt cách thanh menu đầu tiên xuống dưới */
+left: 0;
+width: 100%;
+z-index: 1020; /* Đảm bảo thanh menu ở dưới thanh menu đầu tiên */
+background-color: #343a40; /* Màu nền để nó rõ ràng */
+}
+
+
+.navbar-bottom .navbar-nav .nav-link {
+color: #ffffff; /* Màu chữ cho các item trong thanh menu */
+}
+
+.navbar-bottom .navbar-nav .nav-link:hover {
+color: #f8f9fa; /* Màu chữ khi hover */
+background-color: #8d8f91; /* Màu nền khi hover */
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+background-color: #ffffff; /* Màu nền cho menu dropdown */
+border-radius: 0.25rem; /* Bo góc của menu dropdown */
+border: 1px solid #ced4da; /* Viền cho menu dropdown */
+box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Đổ bóng cho menu dropdown */
+}
+
+.dropdown-item {
+color: #212529; /* Màu chữ cho item trong dropdown */
+}
+
+.dropdown-item:hover {
+background-color: #f8f9fa; /* Màu nền khi hover trên item của dropdown */
+color: #5293d4; /* Màu chữ khi hover */
+}
+
+.dropdown-toggle::after {
+display: none; /* Xóa mũi tên mặc định của dropdown */
+}
+
+.navbar-bottom .navbar-nav .dropdown-menu .dropdown-item {
+padding: 10px 20px; /* Padding cho các item trong dropdown */
+}
+
+/* Nút điều hướng carousel */
+.carousel-control-prev,
+.carousel-control-next {
+width: 50px; /* Điều chỉnh kích thước nếu cần */
+height: 50px; /* Điều chỉnh kích thước nếu cần */
+background-color: #007bff; /* Màu nền nổi bật */
+border-radius: 50%; /* Hình tròn */
+color: #fff; /* Màu của mũi tên */
+border: 2px solid #fff; /* Đường viền trắng để nổi bật */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+background-image: none; /* Xóa hình ảnh mặc định */
+}
+
+.carousel-control-prev:after,
+.carousel-control-next:after {
+content: ''; /* Xóa nội dung mặc định */
+display: inline-block;
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 10px 14px 10px 14px;
+border-color: transparent #fff transparent transparent; /* Mũi tên màu trắng */
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+}
+
+.carousel-control-prev:after {
+left: 50%;
+transform: translate(-50%, -50%) rotate(180deg); /* Mũi tên sang trái */
+}
+
+.carousel-control-next:after {
+right: 50%;
+transform: translate(50%, -50%); /* Mũi tên sang phải */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+background-color: #0056b3; /* Màu nền khi hover */
+}
+
+/* Phần blog mới nhất */
+.card {
+border: 1px solid #ddd; /* Đường viền của thẻ card */
+border-radius: 5px; /* Bo góc cho thẻ card */
+overflow: hidden; /* Ẩn phần tràn ra ngoài của hình ảnh */
+}
+
+.card-img-top {
+width: 100%; /* Đảm bảo hình ảnh bao phủ toàn bộ card */
+height: 200px; /* Kích thước cố định cho hình ảnh */
+object-fit: cover; /* Đảm bảo hình ảnh không bị biến dạng */
+}
+
+.card-body {
+padding: 20px; /* Khoảng cách giữa nội dung và viền của card */
+}
+
+.card-title {
+font-size: 1.25rem; /* Kích thước chữ tiêu đề */
+margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+}
+
+.card-text {
+font-size: 0.875rem; /* Kích thước chữ nội dung */
+}
+
+.btn-primary {
+background-color: #007bff; /* Màu nền của nút */
+border-color: #007bff; /* Màu viền của nút */
+}
+
+.btn-primary:hover {
+background-color: #0056b3; /* Màu nền khi hover */
+border-color: #004085; /* Màu viền khi hover */
+}
+
+
+
+/* CSS cho trang hồ sơ người dùng */
+.profile-container {
+    margin-top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+.profile-section {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.25rem;
+    padding: 20px;
+    margin-right: 20px;
+}
+.profile-info {
+    flex: 2;
+}
+.profile-sidebar {
+    flex: 1;
+}
+.profile-btn {
+    width: 100%;
+}
+.form-group label {
+    font-weight: bold;
+}
+
+
+ /* Footer */
+ .footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
